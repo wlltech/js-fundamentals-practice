@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión con Botón</title>
+</head>
+
+<body>
+        <h1>Adivina la contraseña</h1>
+        <p>Ingresa un número de cero a cinco, luego click en el botón "Iniciar Seción" y veamos si adivinas la contraseña</p>
+        <input />
+        <button>Iniciar Sesión</button>
+
+    <script>
+        
+        var psw = Math.round(Math.random()*5);
+        var pswIngresado = document.querySelector("input");
+        pswIngresado.focus();
+
+        function iniciarSesion() {
+
+                if (psw == parseInt(pswIngresado.value)) {
+                    alert("Bienvenido al sistema");
+                } else {
+                    alert("Contraseña inválida, intente de nuevo");
+                    pswIngresado.value = "";
+                    pswIngresado.focus();
+                }
+            }
+
+        var button = document.querySelector("button");
+        button.onclick = iniciarSesion;
+
+    </script>
+</body>
+
+</html>

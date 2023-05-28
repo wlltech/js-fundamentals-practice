@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule el año de su nacimiento</title>
+</head>
+<h2>Calculamos tu edad<br> a partir de tu año de nacimiento</h2>
+<body>
+    <script>
+        function calcularAnho(year){
+            return (2023-year);
+        }
+
+        function imprimir(texto){
+            document.write(texto);
+        }
+
+        var nombre = prompt("Digite su nombre");
+        var anhoNacimiento = prompt("Hola " + nombre + ", digite su año de nacimiento");
+        var calculoAnho = calcularAnho(anhoNacimiento)
+       imprimir("Tu edad es: " + calculoAnho);
+    </script>
+</body>
+</html>

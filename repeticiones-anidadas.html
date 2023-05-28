@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeticiones anidadas</title>
+</head>
+<body>
+    <h1>Repeticiones usando for anidados</h1>
+    <script>
+        function saltarLinea(){
+            document.write("<br>");
+        }
+        function imprimir(texto){
+            document.write(texto);
+        }
+        var caracteres = prompt("Ingrese los caracteres que desea repetir")
+        var filas = prompt("¿Cuántas filas?")
+        var columnas = prompt("¿Cuántas columnas?")
+        for(var contador = 1;contador<=filas;contador++){
+            for(var contador2 = 1;contador2<=columnas;contador2++){
+                imprimir(caracteres);
+            }
+            saltarLinea();
+        }
+
+    </script>
+</body>
+</html>

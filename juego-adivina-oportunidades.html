@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de adivinanza y oportunidades</title>
+</head>
+<body> 
+    <h1>Juego de Adivinanza</h1>
+    <script>
+        function saltarLinea (){
+            document.write("<br>");
+        }
+        function imprimir (texto){
+            document.write(texto);
+            saltarLinea();
+        }
+        var oportunidades = 3;
+        var contador = 1;
+        var adivinanza = Math.round(Math.random()*10)
+        while(contador<=oportunidades){
+            var numero = prompt("Intento # " + contador +". Ingrese un número");
+            if(numero==adivinanza){
+                imprimir("Felicidades el número era " + adivinanza + ". Usted acertó en el intento " + contador)
+                break;
+            } else{
+                contador++
+            }
+                      
+        }
+
+        if (adivinanza!=numero){
+            imprimir("No lo lograste, el número era: " + adivinanza); 
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredientes no repetidos</title>
+</head>
+
+<body>
+    <p>Ha finalizado de añadir los ingredientes.</p>
+    <script>
+
+        var ingredientes = [];
+        var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+        var contador = 1;
+
+        while (contador <= cantidad) {
+            var ingrediente = prompt("Escriba el ingrediente " + contador + ":");
+            var existe = false;
+            for (var posicion = 0; posicion < ingredientes.length; posicion++) {
+                if (ingredientes[posicion] == ingrediente) {
+                    existe = true;
+                    alert(ingrediente + " está repetido, click en OK en ingrese otro");
+                    break;
+                }
+            }
+            if (existe == false) {
+                ingredientes.push(ingrediente);
+                contador++;
+            }
+        }
+        console.log(ingredientes);
+        document.write(ingredientes);
+
+    </script>
+</body>
+
+</html>

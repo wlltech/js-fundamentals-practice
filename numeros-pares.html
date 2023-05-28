@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <script>
+        function saltar(){
+            document.write("<br>");
+        }
+        function imprimir (texto){
+            document.write(texto);
+            saltar();
+        }
+        imprimir("<h2>Primer método</h2>");
+        imprimir("<p>Imprime los números pares del 0 al 50 2*contador</p>");
+        var contador = 1;
+
+        while(contador<=50){
+            imprimir (2*contador);
+            contador++;
+        }
+        imprimir("FIN");
+        imprimir("");
+        imprimir("<h2>Segundo método</h2>");
+        imprimir("<p>Imprime los números pares del 0 al 100 incrementando de dos en dos contador + 2</p>");
+        var contador2 = 2;
+        while(contador2 <= 100) {
+            imprimir(contador2);
+            contador2 = contador2 + 2; // incrementar de dos en dos
+        }
+    imprimir("FIN");
+
+    </script>
+</body>
+</html>

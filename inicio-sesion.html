@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var inicioDeSesionRegistrado = "user";
+        var contrasenhaRegistrada = "abc123";
+
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        for (var contador = 2; contador <= 3; contador++) {
+            if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada) {
+                alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+                break;
+            } else {
+                alert("Inicio de sesión inválido. Favor intente de nuevo");
+                var inicioDeSesionIngresado = prompt("Intento "+contador+". Ingrese su usuario");
+                var contrasenhaIngresada = prompt("Ingrese su contraseña");
+            }
+            
+        }
+
+        if (inicioDeSesionRegistrado != inicioDeSesionIngresado){
+            if(contrasenhaRegistrada != contrasenhaIngresada)
+            document.write("Usuario bloqueado!!");
+        }
+ 
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can you drive?</title>
+</head>
+
+<body>
+    <h1>Can you drive?</h1>
+    <script>
+        function printMessage(text) {
+            document.write(text);
+        }
+
+        function tab() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        var name = prompt("What's your name:");
+        var yearOld = parseInt(prompt("How old are you?:"));
+        var license = prompt("Do you have a drive's license: (Yes, Not)");
+
+        if (yearOld >= 18) {
+            if(license == "Yes"){
+                printMessage(name + " you can drive");
+            }   
+            else {
+                printMessage(name + " you can't drive");
+            }     
+        } 
+        else {
+            printMessage(name + ", you can't drive");
+        }
+    </script>
+</body>
+
+</html>

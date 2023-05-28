@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Años de diferencia</title>
+</head>
+
+<body>
+    <h3>Años de Diferencia</h3>
+    <p>¿Cuántos años de diferencia tienes con alguien?</p>
+    <p>Programa que muestra el mensaje ¨Nuestra diferencia de edad es¨, concatenando el resultado de la
+        diferencia de tu edad con la de alguien. La respuesta puede dar negativa, sin duda. Usando las funciones saltarLinea, imprimir y la etiqueta
+        "meta" para resolver problemas de acentuación.
+    </p>
+</body>
+    <script>
+        var miEdad = 34;
+        var edadAlguien = 32;
+        var diferenciaEdades = miEdad-edadAlguien
+
+        function calcularDiferenciaEdades (){
+            miEdad - edadAlguien;
+        }
+
+        function saltoLinea(){
+            document.write("<br>");
+        }
+        
+        function imprimir(mensaje){
+            document.write(mensaje);
+            saltoLinea();
+            document.write(diferenciaEdades);
+            document.write(" años");
+        }
+
+
+
+        imprimir("Nuestra diferencia de edad es: ");
+
+    </script>
+</html>

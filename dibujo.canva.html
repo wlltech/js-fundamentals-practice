@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo Libre</title>
+</head>
+
+<body>
+    <canvas width="1000" height="1000"></canvas>
+</body>
+<script>
+    var lienzo = document.querySelector("canvas");
+    var pincel = lienzo.getContext("2d");
+
+    // Tejas
+    pincel.fillStyle = "#cd292c";
+    pincel.beginPath();
+    pincel.moveTo(300, 50);
+    pincel.lineTo(120, 150);
+    pincel.lineTo(480, 150);
+    pincel.fill();
+
+    // Techo
+    pincel.fillStyle = "#f1d55f";
+    pincel.beginPath();
+    pincel.moveTo(300, 70);
+    pincel.lineTo(150, 150);
+    pincel.lineTo(450, 150);
+    pincel.fill();
+
+    // Chimenea
+    pincel.fillStyle = "#cd292c";
+    pincel.beginPath();
+    pincel.moveTo(200, 70);
+    pincel.lineTo(200, 110);
+    pincel.lineTo(220, 110);
+    pincel.lineTo(220, 70);
+    pincel.fill();
+
+    // Paredes
+    pincel.fillStyle = "#f1d55f";
+    pincel.beginPath();
+    pincel.moveTo(150, 150);
+    pincel.lineTo(150, 250);
+    pincel.lineTo(450, 250);
+    pincel.lineTo(450, 150);
+    pincel.fill();
+
+    // Marco Puerta
+    pincel.fillStyle = "#614931";
+    pincel.beginPath();
+    pincel.moveTo(200, 180);
+    pincel.lineTo(200, 250);
+    pincel.lineTo(270, 250);
+    pincel.lineTo(270, 180);
+    pincel.fill();
+
+    // Puerta
+    pincel.fillStyle = "#9f7851";
+    pincel.beginPath();
+    pincel.moveTo(210, 190);
+    pincel.lineTo(210, 250);
+    pincel.lineTo(260, 250);
+    pincel.lineTo(260, 190);
+    pincel.fill();
+
+    // Ventana 1
+    pincel.fillStyle = "#2cb3f0";
+    pincel.beginPath();
+    pincel.moveTo(300, 180);
+    pincel.lineTo(300, 240);
+    pincel.lineTo(350, 240);
+    pincel.lineTo(350, 180);
+    pincel.fill();
+
+    // Ventana 2
+    pincel.fillStyle = "#2cb3f0";
+    pincel.beginPath();
+    pincel.moveTo(360, 180);
+    pincel.lineTo(360, 240);
+    pincel.lineTo(410, 240);
+    pincel.lineTo(410, 180);
+    pincel.fill();
+
+</script>
+
+</html>

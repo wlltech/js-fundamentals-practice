@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar</title>
+</head>
+
+<body>
+    <h1>Juego para adivinar el número</h1>
+        <script>
+        function imprimir(texto) {
+            document.write(texto);
+            saltarLinea();
+        }
+
+        function saltarLinea() {
+            document.write("<br>")
+        }
+
+        function sorteo(numero) {
+            return (numeroAleatorio = Math.round(Math.random() * numero));
+        }
+
+        var limite = parseInt(prompt("hoy jugaremos a adivinar un número del 1 al: "));
+        var pedirNumero = prompt("Ingresa un número de 1 a " + limite + " y veamos si adivinas");
+        var resultado = sorteo(pedirNumero);
+
+        imprimir(resultado);
+
+        if (pedirNumero == resultado) {
+            imprimir("Felicidades!!!!!!!!!!!, adivinaste!! el número es: " + numeroAleatorio);
+        } else {
+            if (pedirNumero < resultado) {
+                imprimir("No adivinaeste, tu número es menor");
+            } else {
+                imprimir("No adivinaeste, tu número es mayor");
+            }
+        }
+    </script>
+</body>
+
+</html>

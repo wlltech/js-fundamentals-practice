@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxonomía de Generaciones</title>
+</head>
+<body>
+    <h2>¿Cuál es tu generación según tu año de nacimiento?</h2>
+    <script>
+        function imprimir(texto){
+            document.write(texto);
+        }
+
+        var nombre = prompt("Hola, escribe tu nombre:");
+        var anhoNacimiento = prompt(nombre + ", ¿Cuál es tu año de nacimiento?:");
+
+        if (anhoNacimiento>2023){
+            imprimir("Vienes del Futuro!!!");
+        }
+        if (anhoNacimiento>=1994){
+            if (anhoNacimiento<=2010)
+            imprimir("Eres de la generación Z");
+        }
+
+        if (anhoNacimiento>=1981){
+            if (anhoNacimiento<=1993)
+            imprimir("Eres de la generación Y");
+        }
+
+        if (anhoNacimiento>=1969){
+            if (anhoNacimiento<=1980)
+            imprimir("Eres de la generación X");
+        }
+
+        if (anhoNacimiento>=1949){
+            if (anhoNacimiento<=1968)
+            imprimir("Eres de la generación Baby Boom");
+        }
+
+        if (anhoNacimiento>=1930){
+            if (anhoNacimiento<=1948)
+            imprimir("Eres de la generación Silent Generation");
+        }
+    </script>
+</body>
+</html>

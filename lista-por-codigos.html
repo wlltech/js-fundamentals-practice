@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Códigos de la lista</title>
+</head>
+
+<body>
+    <h1>Bandera de Colombia</h1>
+    <br>
+    <p>Escribe los colores de la bandera de Colombia:</p>
+    <input />
+    <button>Consultar</button>
+    <script>
+
+        function imprimir(texto) {
+            document.write(texto);
+        }
+
+        var input = document.querySelector("input");
+        //Posibles variaciones cuando alguien escribe el color
+        var lista = ["Amarillo", "Azúl", "azúl","Azul", "Rojo", "amarillo", "azul", "rojo", "AMARILLO", "AZUL", "ROJO"]
+        var encontrado = true;
+        input.focus();
+
+        function buscar() {
+            for (var posicion = 0; posicion <= lista.length; posicion++) {
+                encontrado=true;
+                input.focus();
+                if (lista[posicion] == input.value) {
+                    alert("Acertaste, " + input.value + " es uno de los tres colores de la bandera de Colombia. Ingresa otro");
+                    encontrado = false;
+                    break;
+                }
+            }
+            if (encontrado == true) {
+                alert(input.value + " no es uno de los tres colores. Intenta nuevamente.");
+            }
+            input.value = "";
+            input.focus;
+        }
+        input.focus;
+        var button = document.querySelector("button");
+        button.onclick = buscar;
+
+
+    </script>
+</body>
+
+</html>
