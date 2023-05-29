@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcule el año de su nacimiento</title>
 </head>
-<h2>Calculamos tu edad<br> a partir de tu año de nacimiento</h2>
+
 <body>
-    <script>
-        function calcularAnho(year){
-            return (2023-year);
-        }
-
-        function imprimir(texto){
-            document.write(texto);
-        }
-
-        var nombre = prompt("Digite su nombre");
-        var anhoNacimiento = prompt("Hola " + nombre + ", digite su año de nacimiento");
-        var calculoAnho = calcularAnho(anhoNacimiento)
-       imprimir("Tu edad es: " + calculoAnho);
-    </script>
+    <h3>Calcular edad a partir del año de nacimiento</h3>
+    <p>Programa que calcula la edad dado el año de nacimiento</p>
+    <hr>
+    <h4>Temas abordados</h4>
+    <ul>
+        <li>Variables</li>
+        <li>Funciones</li>
+        <li>Función prompt</li>
+        <li>Operaciones matemáticas</li>
+        <li>Función document.write</li>
+    </ul>
+    <hr>
+    <h4>Ciclo del programa</h4>
+    <ol>
+        <li>Se declara la función <strong>calcularAnho</strong> que recibe como parámetro el año y devuelve el calculo
+            del año 2023 menos el año recibido por parámetro.</li>
+        <li>Se declara la función <strong>imprimir</strong> que recibe como parámetro un texto e imprime ese texto.</li>
+        <li>Se declara la variable <strong>nombre</strong> para capturar el nombre del usuario y asignarlo a esta
+            variable.</li>
+        <li>Se declara la variable <strong>anhoNacimiento</strong> para capturar el año del usuario mostrando en una
+            ventana emergente un mensaje que
+            devuelve el valor almacenado en la variable <strong>nombre</strong> y un texto con la instrucción para que
+            el usuario digite su año de nacimiento</li>
+        <li>Se declara la variable <strong>calculoAnho</strong> para llamar la función <strong>calculoAnho</strong>
+            pasando por parámetro el valor de la nariable <strong>anhoNacimiento</strong></li>
+        <li>Se llama la función <strong>imprimir</strong> donde se envía por parámetro un mensaje concatenado a la
+            variable <strong>calculoAnho</strong> para que retorne el resultado</li>
+    </ol>
+    <hr>
+    <h4>Resultado</h4>
 </body>
+
+<script>
+    function calcularAnho(year) {
+        return (2023 - year);
+    }
+
+    function imprimir(texto) {
+        document.write(texto);
+    }
+
+    var nombre = prompt("Digite su nombre");
+    var anhoNacimiento = prompt("Hola " + nombre + ", digite su año de nacimiento");
+    var calculoAnho = calcularAnho(anhoNacimiento);
+    imprimir("Tu edad es: " + calculoAnho);
+</script>
+
 </html>
