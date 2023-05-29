@@ -6,21 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablas de Multiplicar</title>
 </head>
+
 <body>
-    <script>
-        function saltar(){
-            document.write("<br>");
-        }
-        function imprimir (texto){
-            document.write(texto);
-            saltar();
-        }
-        var tabla = parseInt(prompt("Calculemos la tabla del:"));
-        var limite = parseInt(prompt("¿Hasta que número desea calcularla?"));
-        imprimir("<h1>Tabla del " + tabla + " hasta el " + limite + "</h1>");
-        for (var contador = 1;contador<=limite;contador++){
-            imprimir(tabla + " X " +  contador  + " = " + tabla*contador);
-        }
-    </script>
+    <h3>Tablas de multiplicar</h3>
+    <p>Programa que genera las tablas de multiplicar.</p>
+    <hr>
+    <h4>Temas abordados</h4>
+    <ul>
+        <li>Funciones en JavaScript</li>
+        <li>Función prompt()</li>
+        <li>Blucle for</li>
+        <li>convertir cadenas en enteros con parseInt</li>
+    </ul>
+    <hr>
+    <h4>Resultado</h4>
 </body>
+
+<script>
+    function saltar(){
+        document.write("<br>");
+    }
+    function imprimir (texto){
+        document.write(texto);
+        saltar();
+    }
+    var tabla = parseInt(prompt("Calculemos la tabla del:"));
+    var limite = parseInt(prompt("¿Hasta que número desea calcularla?"));
+    imprimir("<h4>Tabla del " + tabla + " hasta el " + limite + "</h4>");
+    for (var contador = 1;contador<=limite;contador++){
+        imprimir(tabla + " X " +  contador  + " = " + tabla*contador);
+    }
+</script>
+
 </html>
