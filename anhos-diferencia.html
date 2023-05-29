@@ -10,35 +10,56 @@
 
 <body>
     <h3>Años de Diferencia</h3>
-    <p>¿Cuántos años de diferencia tienes con alguien?</p>
-    <p>Programa que muestra el mensaje ¨Nuestra diferencia de edad es¨, concatenando el resultado de la
-        diferencia de tu edad con la de alguien. La respuesta puede dar negativa, sin duda. Usando las funciones saltarLinea, imprimir y la etiqueta
-        "meta" para resolver problemas de acentuación.
-    </p>
+    <p>Programa que muestra cuántos años de diferencia tienes con alguien.</p>
+    <hr>
+    <h4>Temas abordados</h4>
+    <ul>
+        <li>Variables</li>
+        <li>Funciones básicas</li>
+    </ul>
+    <hr>
+    <h4>Ciclo del programa</h4>
+    <ol>
+        <li>Se declara la variable <strong>miEdad</strong> para ingresar una de las edades</li>
+        <li>Se declara la variable <strong>edadAlguien</strong> para ingrar la edad de la otra persona</li>
+        <li>Se declara la función <strong>calcularDiferenciaEdades</strong> para definir la operación matemática</li>
+        <li>Se declara la función <strong>saltoLinea</strong> para agregar un salto de línea a la respuesta (opcional)
+        </li>
+        <li>Se declara la función <strong>imprimir</strong> para configurar un mensaje con el resultado en pantalla.
+            Dentro
+            de esta función, se llaman las funciones <strong>imprimir</strong> y
+            <strong>calcularDiferenciaEdades</strong>
+        </li>
+        <li>Finalmente, se llama la función <strong>imprimir</strong> anteriormente definida, y se pasa por parámetro el
+            mensaje que desea imprimirse</li>
+    </ol>
+    <hr>
+    <h4>Resultado</h4>
 </body>
-    <script>
-        var miEdad = 34;
-        var edadAlguien = 32;
-        var diferenciaEdades = miEdad-edadAlguien
+<script>
+    var miEdad = 34;
+    var edadAlguien = 32;
 
-        function calcularDiferenciaEdades (){
-            miEdad - edadAlguien;
-        }
+    function calcularDiferenciaEdades() {
+        return (miEdad - edadAlguien);
+    }
 
-        function saltoLinea(){
-            document.write("<br>");
-        }
-        
-        function imprimir(mensaje){
-            document.write(mensaje);
-            saltoLinea();
-            document.write(diferenciaEdades);
-            document.write(" años");
-        }
+    function saltoLinea() {
+        document.write("<br>");
+    }
 
+    function imprimir(mensaje) {
+        document.write(mensaje);
+        saltoLinea();
+        document.write(calcularDiferenciaEdades());
+        document.write(" años");
+    }
 
 
-        imprimir("Nuestra diferencia de edad es: ");
 
-    </script>
+    imprimir("Nuestra diferencia de edad es: ");
+
+
+</script>
+
 </html>
