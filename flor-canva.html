@@ -9,40 +9,76 @@
 </head>
 
 <body>
+    <h3>Diseño de una flor con canva</h3>
+    <p>Programa que diseña una flor de colores en canva</p>
+    <hr>
+    <h4>Explicación del código</h4>
+    <ol>
+        <li>
+            <strong>var pantalla = document.querySelector("canvas");</strong> Esta línea busca en el documento HTML un
+            elemento especial llamado "canvas" y
+            guarda una referencia a ese elemento en la variable llamada "pantalla". Es como encontrar un lienzo en
+            blanco en una habitación y recordar su ubicación para usarlo más tarde.
+        </li>
+        <li>
+            <strong>var pincel = pantalla.getContext("2d");</strong> Esta línea obtiene una herramienta especial llamada
+            "pincel" que se utiliza para
+            dibujar en el lienzo (canvas) que encontramos anteriormente. Es como tomar un pincel específico que está
+            diseñado para trabajar en el lienzo.
+        </li>
+        <li>
+            <strong>pincel.fillStyle = "lightgray";</strong> Esta línea elige un color para el pincel. En este caso, se
+            establece el color de
+            relleno en "gris claro". Es como decidir usar un color gris claro para rellenar las formas que vamos a
+            dibujar.
+        </li>
+        <li>
+            <strong>pincel.fillRect(0, 0, 600, 400);</strong> Esta línea dibuja un rectángulo en el lienzo utilizando el
+            pincel y el color de
+            relleno especificados anteriormente. El rectángulo se dibuja en la posición (0, 0) y tiene un ancho de 600 y
+            una altura de 400. Es como usar el pincel para pintar un rectángulo de cierto tamaño en el lienzo,
+            comenzando desde la esquina superior izquierda.
+        </li>
+        <li>
+            <strong>Función dibujarCirculo</strong> Acepta cuatro parámetros: x, y, radio y color.
+            <strong>pincel.fillStyle = color;</strong> Establece el color de relleno del pincel.
+            <strong>pincel.beginPath();</strong> Método del objeto pincel; Inicia un nuevo camino de dibujo.
+            <strong>pincel.arc(x, y, radio, 0, 2
+                * Math.PI);</strong> arc es otro método del objeto pincel que dibuja un arco; x y y representan las
+            coordenadas del centro del arco en el lienzo. El punto (x, y) será el centro del círculo que se dibujará.
+            Radio es el radio del círculo que queremos dibujar. Determina el tamaño del arco. 0 especifica el ángulo
+            inicial del arco en radianes, en este caso, se usa 0 para que el arco comience desde la posición de las 3 en
+            punto de un reloj. 2 * Math.PI especifica el ángulo final del arco en radianes. Math.PI es una constante en
+            JavaScript que representa el valor de π (pi), que es la relación entre la circunferencia de un círculo y su
+            diámetro, multiplicarlo por 2 nos da un arco completo (360 grados) alrededor del centro del círculo.
+            <strong>pincel.fill();</strong> Rellena el arco con el color de relleno establecido previamente. El método
+            fill del pincel se utiliza para aplicar el color de relleno y completar la forma.
+        </li>
+    </ol>
+
+
     <canvas width="600" height="400"></canvas>
+<script>
+    
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgray";
+    pincel.fillRect(0, 0, 600, 400);
 
-    <script>
+    function dibujarCirculo(x, y, radio, color) {
 
-        var pantalla = document.querySelector("canvas");
-        var pincel = pantalla.getContext("2d");
-        pincel.fillStyle = "lightgray";
-        pincel.fillRect(0, 0, 600, 400);
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2 * 3.14);
+        pincel.fill();
+    }
 
-        function dibujarCirculo(x, y, radio, color) {
-
-            pincel.fillStyle = color;
-            pincel.beginPath();
-            pincel.arc(x, y, radio, 0, 2 * 3.14);
-            pincel.fill();
-        }
-
-        function dibujarFlor(x,y) {
-            dibujarCirculo(x, y, 20, "red");
-            dibujarCirculo(x, y-40, 20, "yellow");
-            dibujarCirculo(x-40, y, 20, "orange");
-            dibujarCirculo(x+40, y, 20, "black");
-            dibujarCirculo(x, y+40, 20, "blue");
-        }
-
-        dibujarFlor(100,100);
-        dibujarFlor(200,150);
-        dibujarFlor(300,200);
-        dibujarFlor(400,250);
-        dibujarFlor(500,300);
-
-
-
-    </script>
-</body>
+    dibujarCirculo(300, 200, 10, "red");
+    dibujarCirculo(300, 220, 10, "blue");
+    dibujarCirculo(320, 200, 10, "black");
+    dibujarCirculo(300, 180, 10, "yellow");
+    dibujarCirculo(280, 200, 10, "orange");
+    
+</script>
 
 </html>
