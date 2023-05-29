@@ -58,27 +58,35 @@
 
 
     <canvas width="600" height="400"></canvas>
-<script>
-    
-    var pantalla = document.querySelector("canvas");
-    var pincel = pantalla.getContext("2d");
-    pincel.fillStyle = "lightgray";
-    pincel.fillRect(0, 0, 600, 400);
+    <script>
 
-    function dibujarCirculo(x, y, radio, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "lightgray";
+        pincel.fillRect(0, 0, 600, 400);
 
-        pincel.fillStyle = color;
-        pincel.beginPath();
-        pincel.arc(x, y, radio, 0, 2 * 3.14);
-        pincel.fill();
-    }
+        function dibujarCirculo(x, y, radio, color) {
 
-    dibujarCirculo(300, 200, 10, "red");
-    dibujarCirculo(300, 220, 10, "blue");
-    dibujarCirculo(320, 200, 10, "black");
-    dibujarCirculo(300, 180, 10, "yellow");
-    dibujarCirculo(280, 200, 10, "orange");
-    
-</script>
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x, y, radio, 0, 2 * 3.14);
+            pincel.fill();
+        }
+
+        function dibujarFlor (x,y) {
+            dibujarCirculo(x, y, 10, "red");
+            dibujarCirculo(x, y+20, 10, "blue");
+            dibujarCirculo(x+20, y, 10, "black");
+            dibujarCirculo(x, y-20, 10, "yellow");
+            dibujarCirculo(x-20, y, 10, "orange");
+        }
+
+        dibujarFlor(300,200);
+        dibujarFlor(360,200);
+        dibujarFlor(420,200);
+        dibujarFlor(480,200);
+
+
+    </script>
 
 </html>
