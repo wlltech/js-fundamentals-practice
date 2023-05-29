@@ -9,34 +9,48 @@
 </head>
 
 <body>
-    <h1>Can you drive?</h1>
-    <script>
-        function printMessage(text) {
-            document.write(text);
-        }
-
-        function tab() {
-            document.write("<br>");
-            document.write("<br>");
-            document.write("<br>");
-        }
-
-        var name = prompt("What's your name:");
-        var yearOld = parseInt(prompt("How old are you?:"));
-        var license = prompt("Do you have a drive's license: (Yes, Not)");
-
-        if (yearOld >= 18) {
-            if(license == "Yes"){
-                printMessage(name + " you can drive");
-            }   
-            else {
-                printMessage(name + " you can't drive");
-            }     
-        } 
-        else {
-            printMessage(name + ", you can't drive");
-        }
-    </script>
+    <h3>Can you drive?</h3>
+    <p>Program that will tell you if you can drive based on a few questions.</p>
+    <hr>
+    <h4>Topics covered</h4>
+    <ul>
+        <li>Functions</li>
+        <li>Variables</li>
+        <li>Dialogs</li>
+        <li>Control structures</li>
+        <li>Output</li>
+    </ul>
+    <hr>
+    <h3>Results</h3>
+    <hr>
 </body>
+
+<script>
+    function printMessage(text) {
+        document.write(text);
+    }
+
+    function tab() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    var name = prompt("What's your name:");
+    var yearOld = parseInt(prompt("How old are you?:"));
+    var license = prompt("Do you have a drive's license: (Yes, Not)");
+
+    if (yearOld >= 18) {
+        if (license == "Yes") {
+            printMessage(name + " you can drive");
+        }
+        else {
+            printMessage(name + " you can't drive");
+        }
+    }
+    else {
+        printMessage(name + ", you can't drive");
+    }
+</script>
 
 </html>
