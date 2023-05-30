@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Canva</title>
+</head>
+
+<body>
+    <h1>Animación simple Canva</h1>
+    <p>este código dibuja una animación simple en un lienzo utilizando el elemento &lt;canvas&gt; y el contexto 2D en
+        JavaScript. La circunferencia se mueve horizontalmente.</p>
+    <hr>
+    <p>Revisar los comentarios en el código con la explicación de cada línea.</p>
+    <!--Esta línea define un elemento <canvas> en el HTML con un ancho de 600 píxeles y una altura de 400 píxeles.-->
+    <canvas width="600" height="400"> </canvas>
+</body>
+
+<script>
+    // Estas líneas obtienen el elemento <canvas> del documento y crean un contexto 2D para dibujar en él. 
+    // El contexto 2D se almacena en la variable pincel.
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    // Estas líneas establecen el color de relleno en gris claro y dibujan un rectángulo en todo el lienzo 
+    // con las dimensiones 600x400 píxeles. Esto sirve como fondo.
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0, 0, 600, 400);
+
+    // Esta función disenharCircunferencia() dibuja una circunferencia en el lienzo. 
+    // Recibe las coordenadas "x" y "y" del centro de la circunferencia y el radio...    
+    function disenharCircunferencia(x, y, radio) {
+        // Establece el color de relleno en azul,
+        pincel.fillStyle = "blue";
+        // crea una nueva ruta utilizando beginPath(),
+        pincel.beginPath();
+        // dibuja la circunferencia utilizando arc() y
+        pincel.arc(x, y, radio, 0, 2 * Math.PI);
+        // finalmente rellena la circunferencia con fill().
+        pincel.fill();
+    }
+
+    //Esta función limpiarPantalla() borra todo el contenido dibujado en el lienzo utilizando clearRect() y...
+    function limpiarPantalla() {
+        // establece el área rectangular a borrar en las coordenadas (0, 0) con 
+        // un ancho de 600 píxeles y una altura de 400 píxeles.
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    // Se declara una variable x y se inicializa en 0.
+    var x = 0;
+
+    // Esta función actualizarPantalla() se encarga de...  
+    function actualizarPantalla() {
+        // limpiar el lienzo,
+        limpiarPantalla();
+        // dibujar la circunferencia en la posición actual (x, 20) y ... 
+        disenharCircunferencia(x, 20, 10);
+        // luego incrementar el valor de x en 1.
+        x++;
+    }
+
+    // Esta línea establece un intervalo de tiempo de 100 milisegundos utilizando setInterval(). 
+    // La función actualizarPantalla() se llamará automáticamente cada 100 milisegundos, lo que 
+    // resultará en la animación de la circunferencia moviéndose horizontalmente en el lienzo.
+    setInterval(actualizarPantalla, 10);
+
+
+
+
+</script>
+
+</html>
